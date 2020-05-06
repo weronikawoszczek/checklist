@@ -11,7 +11,6 @@ jQuery(function ($) {
 
 	var util = {
 		uuid: function () {
-			/*jshint bitwise:false */
 			var i, random;
 			var uuid = '';
 
@@ -50,13 +49,13 @@ jQuery(function ($) {
 					this.filter = filter;
 					this.render();
 				}.bind(this)
-			}).init('/all');
+			}).init('/active');
 		},
 		bindEvents: function () {
-			$('.new-todo').on('keyup', this.create.bind(this));
+			$('.new-check').on('keyup', this.create.bind(this));
 			$('.toggle-all').on('change', this.toggleAll.bind(this));
 			$('.footer').on('click', '.clear-completed', this.destroyCompleted.bind(this));
-			$('.todo-list')
+			$('.check-list')
 				.on('change', '.toggle', this.toggle.bind(this))
 				.on('dblclick', 'label', this.editingMode.bind(this))
 				.on('keyup', '.edit', this.editKeyup.bind(this))
@@ -65,16 +64,16 @@ jQuery(function ($) {
 		},
 		render: function () {
 			var todos = this.getFilteredTodos();
-			$('.todo-list').html(this.todoTemplate(todos));
+			$('.check-list').html(this.todoTemplate(todos));
 			$('.main').toggle(todos.length > 0);
 			$('.toggle-all').prop('checked', this.getActiveTodos().length === 0);
 			this.renderFooter();
-			$('.new-todo').focus();
+			$('.new-check').focus();
 			util.store('todos-jquery', this.todos);
 		},
 		renderFooter: function () {
 			var todoCount = this.todos.length;
-			var activeTodoCount = this.getActiveTodos().length;
+			var activeTodoCount = this.getActiveTodos().length + " ";
 			var template = this.footerTemplate({
 				activeTodoCount: activeTodoCount,
 				activeTodoWord: util.pluralize(activeTodoCount, 'item'),
