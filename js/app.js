@@ -155,7 +155,6 @@ jQuery(function ($) {
 		},
 		editingMode: function (e) {
 			var $input = $(e.target).closest('li').addClass('editing').find('.edit');
-			// puts caret at end of input
 			var tmpStr = $input.val();
 			$input.val('');
 			$input.val(tmpStr);
