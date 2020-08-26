@@ -19,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jQueryapp 100elem" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -58,7 +58,10 @@
       <workItem from="1590440516095" duration="709000" />
       <workItem from="1590844448474" duration="3629000" />
       <workItem from="1591394446349" duration="965000" />
-      <workItem from="1591477714787" duration="1065000" />
+      <workItem from="1591477714787" duration="1348000" />
+      <workItem from="1591707742212" duration="406000" />
+      <workItem from="1592165281534" duration="2430000" />
+      <workItem from="1598366145684" duration="2029000" />
     </task>
     <servers />
   </component>
